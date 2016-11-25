@@ -1,4 +1,9 @@
 
+Miles Deep 使用了一个带有残差连接（residual connections）的深度卷积神经网络（DCNN），可以基于性行为（sexual act）将一段色情视频的每一秒分类成 6 种类别，其准确度高达 95%。然后它可以使用这种分类来自动编辑该视频。它可以移除所有不包含性接触的场景，或者编辑去掉一种特定的性行为。
+Miles Deep 和雅虎最近发布的 NSFW 模型（见机器之心报道《雅虎开源首个色情图像检测深度学习解决方案》）使用了类似的架构，但不一样的是 Miles Deep 还能够区分裸体和多种特定的性行为之间的不同。就我所知，这是第一个公开的色情视频分类或编辑工具。
+这个程序可以说是使用 Caffe 模型进行视频分类的一种通用框架，其使用了 C++ 的 batching 和 threading。通过替换权重、模型定义和 mean file，它可以立即被用于编辑其它类型的视频，而不需要重新编译。
+##--------------------------------------------------------
+
 #Miles Deep - AI Porn Video Editor
 
 Using a deep convolutional neural network with residual connections, Miles Deep quickly classifies each second of a pornographic video into 6 categories based on sexual act with 95% accuracy. Then it uses that classification to automatically edit the video. It can remove all the scenes not containing sexual contact, or edit out just a specific act.
